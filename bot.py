@@ -48,6 +48,7 @@ active_games = {} # Guruhlardagi o'yin holatini saqlash uchun
 def get_start_keyboard(bot_username):
     bot_link = f"https://t.me/{bot_username}?startgroup=true"
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="Shaxsiy o'ynash 👤", callback_data="play_private")],
         [InlineKeyboardButton(text="Guruhga qo'shish ➕", url=bot_link)]
     ])
     return keyboard
@@ -89,7 +90,15 @@ async def stop_cmd(message: types.Message):
 
 @dp.message(Command("start"))
 async def start_cmd(message: types.Message):
-    await message.answer("Salom! Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
+    if message.chat.type == "private":
+        bot_info = await bot.get_me()
+        await message.answer("Salom! Testni qayerda o'ynamoqchisiz?", reply_markup=get_start_keyboard(bot_info.username))
+    else:
+        await message.answer("Salom! Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
+
+@dp.callback_query(F.data == "play_private")
+async def play_private_cb(callback: types.CallbackQuery):
+    await callback.message.edit_text("Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
 
 @dp.callback_query(F.data.startswith("sec_"))
 async def section_callback(callback: types.CallbackQuery):
