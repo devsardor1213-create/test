@@ -74,22 +74,31 @@ def get_ready_keyboard(players_count=0):
         [InlineKeyboardButton(text="Bo'limni o'zgartirish 🗂", callback_data="change_section")]
     ])
 
+@dp.message(Command("stop"))
+async def stop_cmd(message: types.Message):
+    chat_id = message.chat.id
+    if chat_id in active_games and active_games[chat_id].get("is_running"):
+        active_games[chat_id]["is_running"] = False
+        task = active_games[chat_id].get("task")
+        if task:
+            task.cancel()
+        active_games.pop(chat_id, None)
+        await message.answer("O'yin to'xtatildi! Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
+    else:
+        await message.answer("Hozir hech qanday o'yin ketmayapti. Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
+
 @dp.message(Command("start"))
 async def start_cmd(message: types.Message):
-    if message.chat.type == "private":
-        bot_info = await bot.get_me()
-        await message.answer(
-            "Salom! Men test botman. Guruhda o'yin o'tkazish uchun meni guruhga qo'shing va admin huquqini bering.", 
-            reply_markup=get_start_keyboard(bot_info.username)
-        )
-    else:
-        # Guruh ichida boshlash - Bo'limni tanlash
-        await message.answer("Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
+    await message.answer("Salom! Test o'tkazish uchun bo'limni tanlang:", reply_markup=get_sections_keyboard())
 
 @dp.callback_query(F.data.startswith("sec_"))
 async def section_callback(callback: types.CallbackQuery):
     section_idx = int(callback.data.split("_")[1])
     chat_id = callback.message.chat.id
+    
+    if chat_id in active_games and active_games[chat_id].get("is_running"):
+        await callback.answer("O'yin allaqachon boshlangan! To'xtatish uchun /stop buyrug'ini bering.", show_alert=True)
+        return
     
     questions_in_section = SECTIONS[section_idx]
     
@@ -167,40 +176,46 @@ async def start_game_cb(callback: types.CallbackQuery):
     await callback.answer("O'yin boshlandi!")
 
 async def run_quiz(chat_id):
-    game = active_games[chat_id]
+    game = active_games.get(chat_id)
+    if not game:
+        return
+    game["task"] = asyncio.current_task()
     
-    await bot.send_message(chat_id, "O'yin boshlandi! 🎉\nHar bir savolga javob berish uchun 30 soniya vaqt beriladi.")
-    await asyncio.sleep(2)
-    
-    for i, q in enumerate(game["questions"], 1):
-        # Javoblarni aralashtirish
-        options_list = list(enumerate(q["options"]))
-        random.shuffle(options_list)
+    try:
+        await bot.send_message(chat_id, "O'yin boshlandi! 🎉\nHar bir savolga javob berish uchun 25 soniya vaqt beriladi.")
+        await asyncio.sleep(2)
         
-        shuffled_options = [opt_text for idx, opt_text in options_list]
-        correct_idx = next(idx for idx, (orig_idx, _) in enumerate(options_list) if orig_idx == q["correct_index"])
-        
-        question_text = f"{i}-savol: {q['question']}"
-        if len(question_text) > 300:
-            question_text = question_text[:297] + "..."
+        for i, q in enumerate(game["questions"], 1):
+            # Javoblarni aralashtirish
+            options_list = list(enumerate(q["options"]))
+            random.shuffle(options_list)
             
-        poll_msg = await bot.send_poll(
-            chat_id=chat_id,
-            question=question_text,
-            options=shuffled_options,
-            type=PollType.QUIZ,
-            correct_option_id=correct_idx,
-            is_anonymous=False, 
-            explanation="Telegramda to'g'ri javob topsangiz ekranda chiroyli emojilar o'zi chiqadi! 🎊",
-            open_period=30 
-        )
-        
-        game["current_poll_id"] = poll_msg.poll.id
-        game["current_correct_id"] = correct_idx
-        
-        await asyncio.sleep(32)
-        
-    await finish_game(chat_id)
+            shuffled_options = [opt_text for idx, opt_text in options_list]
+            correct_idx = next(idx for idx, (orig_idx, _) in enumerate(options_list) if orig_idx == q["correct_index"])
+            
+            question_text = f"{i}-savol: {q['question']}"
+            if len(question_text) > 300:
+                question_text = question_text[:297] + "..."
+                
+            poll_msg = await bot.send_poll(
+                chat_id=chat_id,
+                question=question_text,
+                options=shuffled_options,
+                type=PollType.QUIZ,
+                correct_option_id=correct_idx,
+                is_anonymous=False, 
+                explanation="Telegramda to'g'ri javob topsangiz ekranda chiroyli emojilar o'zi chiqadi! 🎊",
+                open_period=25 
+            )
+            
+            game["current_poll_id"] = poll_msg.poll.id
+            game["current_correct_id"] = correct_idx
+            
+            await asyncio.sleep(27)
+            
+        await finish_game(chat_id)
+    except asyncio.CancelledError:
+        pass
 
 @dp.poll_answer()
 async def handle_poll_answer(poll_answer: types.PollAnswer):
