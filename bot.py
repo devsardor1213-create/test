@@ -10,7 +10,7 @@ from aiogram.enums import PollType
 logging.basicConfig(level=logging.INFO)
 
 # --- DIQQAT: BOT TOKENINI SHU YERGA YOZING ---
-TOKEN = "8001673740:AAF1tGGwN4Hm1D7h4nWdVOO7bUrvPBNxA7s"
+TOKEN = "8448653743:AAElXteMA0bl5-ItsRP6Bdu1xl6NzRlEET4"
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
