@@ -22,20 +22,66 @@ except Exception as e:
     ALL_QUESTIONS = []
     print(f"Xatolik: questions.json o'qilmadi! Sababi: {e}")
 
-# Bo'limlarning nomlari (O'zingiz xohlagan nomlarni shu yerga yozib chiqing)
-SECTION_NAMES = [
-    "1-bo'lim (1-100-savollar)",
-    "2-bo'lim (101-200-savollar)",
-    "3-bo'lim (201-300-savollar)",
-    "4-bo'lim (301-400-savollar)",
-    "5-bo'lim (401-500-savollar)",
-    "6-bo'lim (501-600-savollar)",
-    "7-bo'lim (601 dan oxirigacha)"
+# --- MAXSUS 50 TALIK BO'LIMNI AJRATISH ---
+import re
+def normalize_text(text):
+    return re.sub(r"['ʻ‘`’]", "", text).lower()
+
+# Foydalanuvchi so'ragan maxsus savollarni topish uchun kalit so'zlar
+SPECIAL_KEYWORDS = [
+    "ekstensiv iqtisodiy", "sof raqobatli", "stagnatsiya", "milliy chegaradan",
+    "iqtisodiy goyalarni", "xarajatlar yigindisi", "makroiqtisodiy ayniyat", "filips egri",
+    "ad egri", "yalpi taklifning", "davlat xarajatlarining", "umumiy makroiqtisodiy",
+    "maksimal foydani", "monopol hokimiyatda", "biror bir tovarni", "nominal yamm",
+    "budjet - bu", "soliqlar tushunchasining", "shaxsiy istemol", "manu qonunlari",
+    "kochmas mulkni garovga", "krepostnoylikning",
+    "statistik korsatkich", "nisbiy miqdorlar", "tasodifiy tanlash", "grafiklarning asosiy",
+    "statistik xaritalar", "korxona rivojlanish", "menejment", "ularsiz sanoat",
+    "yangi texnika samaradorligini", "ishlab chiqarish xarajatlari", "zamonaviy texnologik",
+    "sanoat namualarining", "iqtisodiy resurslar", "ishlab chiqarish resursi",
+    "istemolchilarning arzon", "atributiv", "guruhlash belgisi", "10 %ga oshadi",
+    "bitimlarni amalga", "individning foydalilikni", "sen – menga", "oddiy shaklda",
+    "mulkiy huquqlarning", "boylikning ota", "murakkab institutsional"
 ]
-SECTIONS = []
+
+special_questions = []
+other_questions = []
+
+for q in ALL_QUESTIONS:
+    text_to_search = normalize_text(q.get('question', '') + " " + " ".join(q.get('options', [])))
+    found = False
+    for kw in SPECIAL_KEYWORDS:
+        if kw in text_to_search:
+            found = True
+            break
+    if found and len(special_questions) < 50:
+        special_questions.append(q)
+    else:
+        other_questions.append(q)
+
+# Agar 50 tadan kam bo'lsa, qolganlaridan olib 50 taga to'ldiramiz
+if len(special_questions) < 50 and other_questions:
+    needed = 50 - len(special_questions)
+    special_questions.extend(other_questions[:needed])
+    other_questions = other_questions[needed:]
+
+SECTION_NAMES = [
+    "⭐ Maxsus bo'lim (50 ta savol)"
+]
+
+SECTIONS = [special_questions]
+
+# Qolganlarini odatiy bo'limlarga bo'lamiz
 chunk_size = 100
-for i in range(0, len(ALL_QUESTIONS), chunk_size):
-    SECTIONS.append(ALL_QUESTIONS[i:i + chunk_size])
+for i in range(0, len(other_questions), chunk_size):
+    chunk = other_questions[i:i + chunk_size]
+    SECTIONS.append(chunk)
+    
+# Bo'lim nomlarini to'ldirish
+for i in range(1, len(SECTIONS)):
+    start_idx = (i-1)*100 + 1
+    end_idx = start_idx + len(SECTIONS[i]) - 1
+    SECTION_NAMES.append(f"{i}-bo'lim ({start_idx}-{end_idx}-savollar)")
 
 active_games = {} # Guruhlardagi o'yin holatini saqlash uchun
 
