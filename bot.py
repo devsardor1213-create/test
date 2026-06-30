@@ -17,97 +17,22 @@ dp = Dispatcher()
 # Savollarni yuklash
 try:
     with open("questions.json", "r", encoding="utf-8") as f:
-        ALL_QUESTIONS = json.load(f)
+        other_questions = json.load(f)
 except Exception as e:
-    ALL_QUESTIONS = []
+    other_questions = []
     print(f"Xatolik: questions.json o'qilmadi! Sababi: {e}")
 
-# --- MAXSUS 50 TALIK BO'LIMNI AJRATISH ---
-import re
-def normalize_text(text):
-    text = re.sub(r"['ʻ‘`’]", "", text)
-    text = re.sub(r"[^a-zA-Z0-9\s]", "", text)
-    return text.lower()
+try:
+    with open("special_questions.json", "r", encoding="utf-8") as f:
+        special_questions = json.load(f)
+except Exception as e:
+    special_questions = []
+    print(f"Xatolik: special_questions.json o'qilmadi! Sababi: {e}")
 
-# Foydalanuvchi so'ragan maxsus savollarni topish uchun kalit so'zlar
-SPECIAL_KEYWORDS = [
-    "ifodalanishiga kora bir biridan mazmunan",
-    "guruhlashtirishda dastlab quyidagilar aniqlanadi",
-    "agar taklif noelastik bolib tovarga bolgan",
-    "bozor iqtisodiyoti normalari yigindisini",
-    "murakkab foyda korish normasi nima uchun",
-    "bozor iqtisodiyotining asosiy normasi qanday",
-    "buyruqbozlik iqtisodiyotida foyda korish",
-    "qonunga ishonch va boysunish normasi",
-    "bozor kelishuvining ekspansiyasi qanday",
-    "siyosat qanday jarayon hisoblanadi",
-    "statistik korsatgich deb nimaga aytiladi",
-    "statistik korsatkich deb nimaga aytiladi",
-    "nisbiy miqdorlar deb nimaga aytiladi",
-    "tasodifiy tanlash deb nimaga aytiladi",
-    "grafiklarning asosiy turi",
-    "statistik xaritalar kozlangan maqsad",
-    "korxona rivojlanish strategiyalari",
-    "boshqarish sanati va mahorati",
-    "ularsiz sanoat iqtisodiyot ham fan texnika",
-    "yangi texnika samaradorligini hisoblash",
-    "ishlab chiqarish xarajatlari bu",
-    "zamonaviy texnologik almashinuv",
-    "sanoat namualarining xalqaro klassifikatsiyasi",
-    "iqtisodiy resurslar toliq korsatilgan",
-    "ishlab chiqarish resursi hisoblanmaydigan",
-    "istemolchilarning arzon narxlarda",
-    "maksimal foydani kozlab harakat qilayotgan",
-    "monopol hokimiyatda narx monopolist",
-    "insonlarning biror bir tovarni sotib",
-    "nominal yamm qanday usul bilan real",
-    "budjet bu",
-    "soliqlar tushunchasining mazmuni",
-    "shaxsiy istemol va jamgarma maqsadlarida",
-    "ekstensiv iqtisodiy osishga qanday erishiladi",
-    "sof raqobatli tarmoqlarda baho nimaning",
-    "stagnatsiya bu",
-    "milliy chegaradan tashqaridagi harakatiga",
-    "iqtisodiy goyalarni vujudga kelishi",
-    "qadimgi hindistondagi manu qonunlarida",
-    "narx navo umumiy darajasining oshishi",
-    "kochmas mulkni garovga qoyish",
-    "firma ishini bozor sharoitiga",
-    "krepostnoylikning vujudga kelish",
-    "tranfert tolovlar bu",
-    "transfert tolovlar bu",
-    "quyidagi korsatkichlardan qaysi biri xarajatlar",
-    "asosiy makroiqtisodiy ayniyat anglatadi",
-    "filips egri chizigi",
-    "ad egri chizigining chap va ong",
-    "yalpi taklifning klassik modelida",
-    "davlat xarajatlarining osishi natijasida",
-    "umumiy makroiqtisodiy muvozanat bu"
-]
-
-special_questions = []
-other_questions = []
-
-for q in ALL_QUESTIONS:
-    text_to_search = normalize_text(q.get('question', '') + " " + " ".join(q.get('options', [])))
-    found = False
-    for kw in SPECIAL_KEYWORDS:
-        if kw in text_to_search:
-            found = True
-            break
-    if found and q not in special_questions:
-        special_questions.append(q)
-    else:
-        if q not in special_questions:
-            other_questions.append(q)
-
-# Boshqa savollarni 50 taga to'ldirish uchun sun'iy aralashtirish olib tashlandi,
-# faqat rasmdagi savollar chiqishi kafolatlandi.
-
-print(f"\\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta\\n")
+print(f"\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta\n")
 
 SECTION_NAMES = [
-    f"⭐ Maxsus bo'lim ({len(special_questions)} ta savol)"
+    f"⭐ Tahrirlangan maxsus bo'lim ({len(special_questions)} ta savol)"
 ]
 
 SECTIONS = [special_questions]
