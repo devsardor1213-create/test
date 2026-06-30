@@ -25,23 +25,64 @@ except Exception as e:
 # --- MAXSUS 50 TALIK BO'LIMNI AJRATISH ---
 import re
 def normalize_text(text):
-    return re.sub(r"['ʻ‘`’]", "", text).lower()
+    text = re.sub(r"['ʻ‘`’]", "", text)
+    text = re.sub(r"[^a-zA-Z0-9\s]", "", text)
+    return text.lower()
 
 # Foydalanuvchi so'ragan maxsus savollarni topish uchun kalit so'zlar
 SPECIAL_KEYWORDS = [
-    "ekstensiv iqtisodiy", "sof raqobatli", "stagnatsiya", "milliy chegaradan",
-    "iqtisodiy goyalarni", "xarajatlar yigindisi", "makroiqtisodiy ayniyat", "filips egri",
-    "ad egri", "yalpi taklifning", "davlat xarajatlarining", "umumiy makroiqtisodiy",
-    "maksimal foydani", "monopol hokimiyatda", "biror bir tovarni", "nominal yamm",
-    "budjet - bu", "soliqlar tushunchasining", "shaxsiy istemol", "manu qonunlari",
-    "kochmas mulkni garovga", "krepostnoylikning",
-    "statistik korsatkich", "nisbiy miqdorlar", "tasodifiy tanlash", "grafiklarning asosiy",
-    "statistik xaritalar", "korxona rivojlanish", "menejment", "ularsiz sanoat",
-    "yangi texnika samaradorligini", "ishlab chiqarish xarajatlari", "zamonaviy texnologik",
-    "sanoat namualarining", "iqtisodiy resurslar", "ishlab chiqarish resursi",
-    "istemolchilarning arzon", "atributiv", "guruhlash belgisi", "10 %ga oshadi",
-    "bitimlarni amalga", "individning foydalilikni", "sen – menga", "oddiy shaklda",
-    "mulkiy huquqlarning", "boylikning ota", "murakkab institutsional"
+    "ifodalanishiga kora bir biridan mazmunan",
+    "guruhlashtirishda dastlab quyidagilar aniqlanadi",
+    "agar taklif noelastik bolib tovarga bolgan",
+    "bozor iqtisodiyoti normalari yigindisini",
+    "murakkab foyda korish normasi nima uchun",
+    "bozor iqtisodiyotining asosiy normasi qanday",
+    "buyruqbozlik iqtisodiyotida foyda korish",
+    "qonunga ishonch va boysunish normasi",
+    "bozor kelishuvining ekspansiyasi qanday",
+    "siyosat qanday jarayon hisoblanadi",
+    "statistik korsatgich deb nimaga aytiladi",
+    "statistik korsatkich deb nimaga aytiladi",
+    "nisbiy miqdorlar deb nimaga aytiladi",
+    "tasodifiy tanlash deb nimaga aytiladi",
+    "grafiklarning asosiy turi",
+    "statistik xaritalar kozlangan maqsad",
+    "korxona rivojlanish strategiyalari",
+    "boshqarish sanati va mahorati",
+    "ularsiz sanoat iqtisodiyot ham fan texnika",
+    "yangi texnika samaradorligini hisoblash",
+    "ishlab chiqarish xarajatlari bu",
+    "zamonaviy texnologik almashinuv",
+    "sanoat namualarining xalqaro klassifikatsiyasi",
+    "iqtisodiy resurslar toliq korsatilgan",
+    "ishlab chiqarish resursi hisoblanmaydigan",
+    "istemolchilarning arzon narxlarda",
+    "maksimal foydani kozlab harakat qilayotgan",
+    "monopol hokimiyatda narx monopolist",
+    "insonlarning biror bir tovarni sotib",
+    "nominal yamm qanday usul bilan real",
+    "budjet bu",
+    "soliqlar tushunchasining mazmuni",
+    "shaxsiy istemol va jamgarma maqsadlarida",
+    "ekstensiv iqtisodiy osishga qanday erishiladi",
+    "sof raqobatli tarmoqlarda baho nimaning",
+    "stagnatsiya bu",
+    "milliy chegaradan tashqaridagi harakatiga",
+    "iqtisodiy goyalarni vujudga kelishi",
+    "qadimgi hindistondagi manu qonunlarida",
+    "narx navo umumiy darajasining oshishi",
+    "kochmas mulkni garovga qoyish",
+    "firma ishini bozor sharoitiga",
+    "krepostnoylikning vujudga kelish",
+    "tranfert tolovlar bu",
+    "transfert tolovlar bu",
+    "quyidagi korsatkichlardan qaysi biri xarajatlar",
+    "asosiy makroiqtisodiy ayniyat anglatadi",
+    "filips egri chizigi",
+    "ad egri chizigining chap va ong",
+    "yalpi taklifning klassik modelida",
+    "davlat xarajatlarining osishi natijasida",
+    "umumiy makroiqtisodiy muvozanat bu"
 ]
 
 special_questions = []
@@ -54,19 +95,19 @@ for q in ALL_QUESTIONS:
         if kw in text_to_search:
             found = True
             break
-    if found and len(special_questions) < 50:
+    if found and q not in special_questions:
         special_questions.append(q)
     else:
-        other_questions.append(q)
+        if q not in special_questions:
+            other_questions.append(q)
 
-# Agar 50 tadan kam bo'lsa, qolganlaridan olib 50 taga to'ldiramiz
-if len(special_questions) < 50 and other_questions:
-    needed = 50 - len(special_questions)
-    special_questions.extend(other_questions[:needed])
-    other_questions = other_questions[needed:]
+# Boshqa savollarni 50 taga to'ldirish uchun sun'iy aralashtirish olib tashlandi,
+# faqat rasmdagi savollar chiqishi kafolatlandi.
+
+print(f"\\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta\\n")
 
 SECTION_NAMES = [
-    "⭐ Maxsus bo'lim (50 ta savol)"
+    f"⭐ Maxsus bo'lim ({len(special_questions)} ta savol)"
 ]
 
 SECTIONS = [special_questions]
