@@ -10,18 +10,11 @@ from aiogram.enums import PollType
 logging.basicConfig(level=logging.INFO)
 
 # --- DIQQAT: BOT TOKENINI SHU YERGA YOZING ---
-TOKEN = "8448653743:AAElXteMA0bl5-ItsRP6Bdu1xl6NzRlEET4"
+TOKEN = "8582270217:AAHojg7oV_Je7qPRkeie6H6f73W-u12umcM"
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 # Savollarni yuklash
-try:
-    with open("questions.json", "r", encoding="utf-8") as f:
-        other_questions = json.load(f)
-except Exception as e:
-    other_questions = []
-    print(f"Xatolik: questions.json o'qilmadi! Sababi: {e}")
-
 try:
     with open("special_questions.json", "r", encoding="utf-8") as f:
         special_questions = json.load(f)
@@ -29,43 +22,14 @@ except Exception as e:
     special_questions = []
     print(f"Xatolik: special_questions.json o'qilmadi! Sababi: {e}")
 
-try:
-    with open("special_questions_2.json", "r", encoding="utf-8") as f:
-        special_questions_2 = json.load(f)
-except Exception as e:
-    special_questions_2 = []
-    print(f"Xatolik: special_questions_2.json o'qilmadi! Sababi: {e}")
-
-print(f"\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta")
-print(f"[INFO] Yangi maxsus bo'lim uchun topilgan savollar soni: {len(special_questions_2)} ta\n")
+print(f"\n[INFO] Asosiy test uchun topilgan savollar soni: {len(special_questions)} ta\n")
 
 SECTION_NAMES = []
 SECTIONS = []
 
 if special_questions:
-    SECTION_NAMES.append(f"⭐ Tahrirlangan maxsus bo'lim ({len(special_questions)} ta savol)")
+    SECTION_NAMES.append(f"⭐ 50 talik maxsus test ({len(special_questions)} ta savol)")
     SECTIONS.append(special_questions)
-
-if special_questions_2:
-    SECTION_NAMES.append(f"🔥 Yangi maxsus bo'lim ({len(special_questions_2)} ta savol)")
-    SECTIONS.append(special_questions_2)
-
-# Qolganlarini odatiy bo'limlarga bo'lamiz
-chunk_size = 100
-start_regular_idx = len(SECTIONS)
-
-for i in range(0, len(other_questions), chunk_size):
-    chunk = other_questions[i:i + chunk_size]
-    SECTIONS.append(chunk)
-    
-# Bo'lim nomlarini to'ldirish
-# Faqatgina 'other_questions' dan olingan qismlarga raqam beramiz
-for i in range(start_regular_idx, len(SECTIONS)):
-    # qaysi qismdaligini topish
-    regular_i = i - start_regular_idx
-    start_idx = regular_i * 100 + 1
-    end_idx = start_idx + len(SECTIONS[i]) - 1
-    SECTION_NAMES.append(f"{regular_i + 1}-bo'lim ({start_idx}-{end_idx}-savollar)")
 
 active_games = {} # Guruhlardagi o'yin holatini saqlash uchun
 
@@ -229,7 +193,7 @@ async def run_quiz(chat_id):
     game["task"] = asyncio.current_task()
     
     try:
-        await bot.send_message(chat_id, "O'yin boshlandi! 🎉\nHar bir savolga javob berish uchun 25 soniya vaqt beriladi.")
+        await bot.send_message(chat_id, "O'yin boshlandi! 🎉\nHar bir savolga javob berish uchun 15 soniya vaqt beriladi.")
         await asyncio.sleep(2)
         
         for i, q in enumerate(game["questions"], 1):
@@ -277,13 +241,13 @@ async def run_quiz(chat_id):
                     correct_option_id=correct_idx,
                     is_anonymous=False, 
                     explanation="Telegramda to'g'ri javob topsangiz ekranda chiroyli emojilar o'zi chiqadi! 🎊",
-                    open_period=25 
+                    open_period=15 
                 )
                 
                 game["current_poll_id"] = poll_msg.poll.id
                 game["current_correct_id"] = correct_idx
                 
-                await asyncio.sleep(27)
+                await asyncio.sleep(17)
             except asyncio.CancelledError:
                 raise
             except Exception as e:

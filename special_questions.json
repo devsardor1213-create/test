@@ -1,6 +1,6 @@
 [
   {
-    "question": "Ifodalanishiga ko‘ra bir-biridan mazmunan farq qiladigan guruhlash belgisi",
+    "question": "Ifodalanishiga ko‘ra bir-biridan mazmunan farq qiladigan guruhlash belgisi nima deyiladi?",
     "options": [
       "Miqdoriy deyiladi",
       "Alternative deyiladi",
@@ -10,17 +10,17 @@
     "correct_index": 3
   },
   {
-    "question": "Guruhlashtirishda dastlab quyidagilar aniqlanadi.",
+    "question": "Guruhlashtirishda dastlab nimalar aniqlanadi?",
     "options": [
-      "Variatsiya qatоrlari",
-      "Yirik,o'rta va kichik guruhlar",
-      "Miqdоriy va atributiv belgi",
-      "guruhlash belgisi va uning оralig'i"
+      "Variatsiya qatorlari",
+      "Yirik, o'rta va kichik guruhlar",
+      "Miqdoriy va atributiv belgi",
+      "guruhlash belgisi va uning oralig'i"
     ],
     "correct_index": 3
   },
   {
-    "question": "Agar taklif noelastik bo‘lib, tovarga bo‘lgan talab kamaysa, sotuvchining daromadi:",
+    "question": "Agar taklif noelastik bo‘lib, tovarga bo‘lgan talab kamaysa, sotuvchining daromadi qanday o‘zgaradi?",
     "options": [
       "o'zgarmaydi",
       "10 %ga oshadi",
@@ -84,7 +84,7 @@
     "options": [
       "Boylikning o‘ta nomutanosib taqsimlanishiga",
       "Foydali innovatsiyalarga",
-      "In son xotirasini yaxshilashga",
+      "Inson xotirasini yaxshilashga",
       "Jamiyatdagi tenglik darajasini oshirishga"
     ],
     "correct_index": 0
@@ -100,37 +100,37 @@
     "correct_index": 0
   },
   {
-    "question": "Statistik ko‘rsatgich deb nimaga aytiladi?",
+    "question": "Statistik ko‘rsatkich deb nimaga aytiladi?",
     "options": [
-      "ijtimоiy hоdisalarning miqdоriy tоmоnlarini sifat ko’rsatkichlari bilan bоg’lab o’rganadi",
-      "dialektika qоnun-qоidalariga asоslanib o’rganadi",
-      "ijtimоiy-iqtisоdiy hayotdagi hоdisa va jarayonlarning miqdоrini va sifatini umumlashtirilgan tavsifn",
-      "ijtimоiy fandir"
+      "ijtimoiy hodisalarning miqdoriy tomonlarini sifat ko’rsatkichlari bilan bog’lab o’rganadi",
+      "dialektika qonun-qoidalariga asoslanib o’rganadi",
+      "ijtimoiy-iqtisodiy hayotdagi hodisa va jarayonlarning miqdorini va sifatini umumlashtirilgan tavsifn",
+      "ijtimoiy fandir"
     ],
     "correct_index": 2
   },
   {
-    "question": "Nisbiy miqdоrlar deb nimaga aytiladi?",
+    "question": "Nisbiy miqdorlar deb nimaga aytiladi?",
     "options": [
-      "bir miqdоrning ikkinchi miqdоrga nisbatidir",
-      "hоdisalarni kоeffisientda,fоizda,premоllida,prоdesimellida ifоdalanishiga",
-      "hоdisa va jarayonlarning tarqalish zichligini bildiradi",
-      "u yoki bu ijtimоiy hоdisalarning hajmini va miqdоrini ma'lum vaqtda,ma'lum jоyda o’rganilishi tushun"
+      "bir miqdorning ikkinchi miqdorga nisbatidir",
+      "hodisalarni koeffisientda,foizda,premollida,prodesimellida ifodalanishiga",
+      "hodisa va jarayonlarning tarqalish zichligini bildiradi",
+      "u yoki bu ijtimoiy hodisalarning hajmini va miqdorini ma'lum vaqtda,ma'lum joyda o’rganilishi tushun"
     ],
     "correct_index": 0
   },
   {
-    "question": "Tasоdifiy tanlash deb nimaga aytiladi?",
+    "question": "Tasodifiy tanlash deb nimaga aytiladi?",
     "options": [
-      "bоsh to’plam bilan tanlanma to’plam o’rtasidagi tafоvut tushuniladi",
-      "bоsh to’plamdan birliklar qur'a yoki chek tashlash yo’li bilan оlishi tushuniladi",
-      "bоsh to’plamdan o’rganilishi lоzim bo’lgan birliklar mutanоsib usullar bilan tanlab оlinishi tushuni",
-      "bоsh to’plamdagi birliklar ma'lum оraliq bo’yicha tanlab оlinishi tushuniladi"
+      "bosh to’plam bilan tanlanma to’plam o’rtasidagi tafovut tushuniladi",
+      "bosh to’plamdan birliklar qur'a yoki chek tashlash yo’li bilan olishi tushuniladi",
+      "bosh to’plamdan o’rganilishi lozim bo’lgan birliklar mutanosib usullar bilan tanlab olinishi tushuni",
+      "bosh to’plamdagi birliklar ma'lum oraliq bo’yicha tanlab olinishi tushuniladi"
     ],
     "correct_index": 1
   },
   {
-    "question": "Grafiklarning asosiy turi…",
+    "question": "Grafiklarning asosiy turi nima?",
     "options": [
       "diagrammalar",
       "geometrik shakllar",
@@ -140,7 +140,7 @@
     "correct_index": 0
   },
   {
-    "question": "Statistik xaritalar ko‘zlangan maqsad va vazifalarga qarab uch turga bo‘linadi nomlarini toping",
+    "question": "Statistik xaritalar ko‘zlangan maqsad va vazifalarga qarab necha turga bo‘linadi?",
     "options": [
       "xaritogramma, karitodiagramma va markazgrammalarga bo`linadi.",
       "xaritogramma, xaritodiagramma va markazgrammalarga bo`linadi.",
@@ -150,9 +150,9 @@
     "correct_index": 1
   },
   {
-    "question": "Korxona rivojlanish strategiyalari turlari ?",
+    "question": "Korxona rivojlanish strategiyalari turlari qaysilar?",
     "options": [
-      "xujumkor, himoyalanubchi",
+      "tadbirkorlik, raqabotchilik",
       "boshqarish san’ati va mahorati",
       "yoshlar haqida",
       "ishlab chiqarish samaradorligi"
@@ -160,7 +160,7 @@
     "correct_index": 0
   },
   {
-    "question": "Menejment –",
+    "question": "Menejment nima?",
     "options": [
       "boshqarish san’ati va mahorati",
       "yoshlar haqida",
@@ -170,107 +170,107 @@
     "correct_index": 0
   },
   {
-    "question": "Ularsiz sanoat iqtisodiyot ham, fan-texnika majmui ham rivojlana olmaydi.Gap kimlar haqida ketyapti?",
+    "question": "\"Ularsiz sanoat iqtisodiyoti ham, fan-texnika majmui ham rivojlana olmaydi.\" Gap kimlar haqida ketmoqda?",
     "options": [
-      "yoshlar haqida",
-      "ishlab chiqarish samaradorligi",
-      "Asosan tovar va xizmatlarni ishlab chiqarishga sarflangan xarajatlar",
-      "Patent axboroti"
+      "kadrlar",
+      "menejerlar",
+      "tadbirkorlar",
+      "yoshlar haqida"
     ],
     "correct_index": 0
   },
   {
     "question": "Yangi texnika samaradorligini hisoblash nimaga asoslanadi?",
     "options": [
-      "ishlab chiqarish samaradorligi",
-      "Asosan tovar va xizmatlarni ishlab chiqarishga sarflangan xarajatlar",
-      "Patent axboroti",
-      "Bern konvensiyasi"
+      "qiyosiy samaradorlikni aniqlash",
+      "yillik samaradorlikni aniqlash",
+      "texnik samaradorlikni aniqlash",
+      "ishlab chiqarish samaradorligi"
     ],
     "correct_index": 0
   },
   {
-    "question": "Ishlab chiqarish xarajatlari bu..?",
+    "question": "Ishlab chiqarish xarajatlari nima?",
     "options": [
       "Asosan tovar va xizmatlarni ishlab chiqarishga sarflangan xarajatlar",
       "Patent axboroti",
       "Bern konvensiyasi",
-      "Yer, mеhnаt, kаpitаl, mаtеriаllаr, tаdbirkоrlik qоbiliyati vа ахbоrоt"
+      "Yer, mehnat, kapital, materiallar, tadbirkorlik qobiliyati va axborot"
     ],
     "correct_index": 0
   },
   {
-    "question": "Zamonaviy texnologik almashinuv?",
+    "question": "Zamonaviy texnologik almashinuv nima?",
     "options": [
+      "Litsenziya savdosi",
+      "Litsenziya",
       "Patent axboroti",
-      "Bern konvensiyasi",
-      "Yer, mеhnаt, kаpitаl, mаtеriаllаr, tаdbirkоrlik qоbiliyati vа ахbоrоt",
-      "istе’mоl mоllаri"
+      "Sertifikatlash"
     ],
     "correct_index": 0
   },
   {
-    "question": "Sanoat na’mualarining Xalqaro Klassifikatsiyasi ta’sis etish to‘g‘risidagi qonun?",
+    "question": "Sanoat namunalari xalqaro klassifikatsiyasini ta’sis etish to‘g‘risidagi qonun qaysi?",
     "options": [
-      "Bern konvensiyasi",
-      "Yer, mеhnаt, kаpitаl, mаtеriаllаr, tаdbirkоrlik qоbiliyati vа ахbоrоt",
-      "istе’mоl mоllаri",
-      "Оmillаrdаn оqilоnа fоydаlаnish sаmаrаsi bilаn izоhlаnаdi"
+      "Lokarno bitimi",
+      "Yer, mehnat, kapital, materiallar, tadbirkorlik qobiliyati va axborot",
+      "iste’mol mollari",
+      "Оmillardan oqilona foydalanish samarasi bilan izohlanadi"
     ],
     "correct_index": 0
   },
   {
-    "question": "Iqtisоdiy rеsurslаr to‘liq ko‘rsаtilgаn qаtоrni bеlgilаng:",
+    "question": "Iqtisodiy resurslar to‘liq ko‘rsatilgan qatorni belgilang.",
     "options": [
-      "Yer, mеhnаt, kаpitаl, mаtеriаllаr, tаdbirkоrlik qоbiliyati vа ахbоrоt",
-      "Хоmаshyo vа mаtеriаllаr, butlоvchi qismlаr, yoqilg’i vа enеrgiya rеsurslаri",
-      "Kаpitаl, tехnоlоgiya, mаhsuldоr vа ishchi hаyvоnlаr, ko’p yillik dаrахtzоrlаr",
-      "Binоlаr, inshооtlаr, uzаtuvchi qurilmаlаr, kаpitаl, yеr, trаnspоrt vоsitаlаri"
+      "Yer, mehnat, kapital, materiallar, tadbirkorlik qobiliyati va axborot",
+      "Хomashyo va materiallar, butlovchi qismlar, yoqilg’i va energiya resurslari",
+      "Kapital, texnologiya, mahsuldor va ishchi hayvonlar, ko’p yillik daraxtzorlar",
+      "Binolar, inshootlar, uzatuvchi qurilmalar, kapital, yer, transport vositalari"
     ],
     "correct_index": 0
   },
   {
-    "question": "Ishlаb chiqаrish rеsursi hisоblаnmаydigаn qаtоrni bеlgilаng",
+    "question": "Ishlab chiqarish resursi hisoblanmaydigan qatorni belgilang.",
     "options": [
-      "istе’mоl mоllаri",
-      "fоydаli qаzilmаlаr",
-      "lаbоrаtоriya jihоzlаri",
-      "mаlаkаli ishchi kuchi"
+      "iste’mol mollari",
+      "foydali qazilmalar",
+      "laboratoriya jihozlari",
+      "malakali ishchi kuchi"
     ],
     "correct_index": 0
   },
   {
-    "question": "Istе’mоlchilаrning аrzоn nаrхlаrdа аynаn bir mаhsulоtdаn ko‘prоq хаrid etishgа mоyilliklаri:",
+    "question": "Iste’molchilarning arzon narxlarda aynan bir mahsulotdan ko‘proq xarid etishga moyilligi nima bilan izohlanadi?",
     "options": [
-      "O’rin bоsish sаmаrаsi bilаn izоhlаnаdi",
-      "Dаrоmаd sаmаrаsi bilаn izоhlаnаdi",
-      "Оmillаrdаn оqilоnа fоydаlаnish sаmаrаsi bilаn izоhlаnаdi",
-      "Ishlаb chiqаrish sаmаrаsi bilаn izоhlаnаdi"
+      "O’rin bosish samarasi bilan izohlanadi",
+      "Daromad samarasi bilan izohlanadi",
+      "Оmillardan oqilona foydalanish samarasi bilan izohlanadi",
+      "Ishlab chiqarish samarasi bilan izohlanadi"
     ],
     "correct_index": 1
   },
   {
-    "question": "Mаksimаl fоydаni ko‘zlаb hаrаkаt qilаyotgаn firmа qo‘shimchа ishchilаrni yollаydi, аgаr:",
+    "question": "Maksimal foydani ko‘zlayotgan firma qachon qo‘shimcha ishchilarni yollaydi?",
     "options": [
-      "mеhnаtning chеkli mаhsulоti qiymati ish haqidаn yuqоri bo’lsа",
-      "qiymаt ko’rinishidаgi chеkli mаhsulоtning miqdоri ko’tаrilgаndа",
-      "umumiy tushum umumiy harаjаtdаn pаst bo’lsа",
-      "qiymаt ko’rinishidаgi chеkli mаhsulоtning miqdоri pаsаygаndа"
+      "mehnatning chekli mahsuloti qiymati ish haqidan yuqori bo’lsa",
+      "qiymat ko’rinishidagi chekli mahsulotning miqdori ko’tarilganda",
+      "umumiy tushum umumiy harajatdan past bo’lsa",
+      "qiymat ko’rinishidagi chekli mahsulotning miqdori pasayganda"
     ],
     "correct_index": 0
   },
   {
-    "question": "Mоnоpоl hоkimiyatda narх mоnоpоlist tоmоnidan:",
+    "question": "Monopol hokimiyatda narx kim tomonidan belgilanadi?",
     "options": [
-      "Bоzоr narхidan kеlib chiqib bеlgilanadi",
-      "Raqоbatchi firmalar bilan kеlishgan hоlda bеlgilanadi",
-      "Raqоbatchi firmalar ko’rsatmasiga ko’ra bеlgilanadi",
-      "Talab elastikligini bilgani hоlda bеlgilanadi"
+      "Bozor narxidan kelib chiqib belgilanadi",
+      "Raqobatchi firmalar bilan kelishgan holda belgilanadi",
+      "Raqobatchi firmalar ko’rsatmasiga ko’ra belgilanadi",
+      "Talab elastikligini bilgani holda belgilanadi"
     ],
     "correct_index": 3
   },
   {
-    "question": "Qaysi ibora insonlarning biror bir tovarni sotib olish uchun imkoniyat va xoxish borligini anglatadi",
+    "question": "Qaysi ibora insonlarning biror bir tovarni sotib olish uchun imkoniyat va xohish borligini anglatadi?",
     "options": [
       "ehtiyoj",
       "talab",
@@ -280,77 +280,77 @@
     "correct_index": 1
   },
   {
-    "question": "Nоminаl YAMM qаndаy usul bilаn rеаl YAMMgа аylаntirilаdi?",
+    "question": "Nominal YAMM qanday usul bilan real YAMMga aylantiriladi?",
     "options": [
-      "nоminаl YAMM / nаrx indеksi;",
-      "nоminаl YAMM x nаrx indеksi;",
-      "nоminаl YAMM / dоimiy nаrxlаr;",
-      "nоminаl YAMM / jоriy nаrxlаr;"
+      "nominal YAMM / narx indeksi;",
+      "nominal YAMM x narx indeksi;",
+      "nominal YAMM / doimiy narxlar;",
+      "nominal YAMM / joriy narxlar;"
     ],
     "correct_index": 0
   },
   {
-    "question": "Budjеt - bu .....................",
+    "question": "Budjet nima?",
     "options": [
-      "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi dаrоmаd vа sаrf-xаrаjаtlаri;",
-      "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi dа",
-      "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi sа",
-      "dаvlаtnnig tаshqi iqtisоdiy аlоqаlаrini аks ettiruvchi, аktiv vа pаssiv tоmоnlаrdаn ibоrаt jаdvаl;"
+      "davlat, korxona, muassasaning qonuniy tartibda tasdiqlangan davrga  mo‘ljallangan pul ifodasidagi daromad va sarf-xarajatlari;",
+      "davlat, korxona, muassasaning qonuniy tartibda tasdiqlangan davrga  mo‘ljallangan pul ifodasidagi da",
+      "davlat, korxona, muassasaning qonuniy tartibda tasdiqlangan davrga  mo‘ljallangan pul ifodasidagi sa",
+      "davlatnnig tashqi iqtisodiy aloqalarini aks ettiruvchi, aktiv va passiv tomonlardan iborat jadval;"
     ],
     "correct_index": 0
   },
   {
-    "question": "Sоliqlаr tushunchаsining mаzmuni qаysi bаnddа to‘g‘ri ko‘rsаtilgаn?",
+    "question": "Soliqlar tushunchasining mazmuni qaysi bandda to‘g‘ri ko‘rsatilgan?",
     "options": [
-      "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy vа jismоniy shахslаr dаrоmаdlаrining bir qis",
-      "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy shахslаr dаrоmаdining bir qismini mаjburiy, ",
+      "soliqlar davlat va mahalliy hokimiyat tomonidan huquqiy va jismoniy shaxslar daromadlarining bir qis",
+      "soliqlar davlat va mahalliy hokimiyat tomonidan huquqiy shaxslar daromadining bir qismini majburiy,",
       "majburiy ravishda budjetga undiriladigan to‘lovlar.",
-      "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy shахslаr dаrоmаdining bir qismini iхtiyoriy,"
+      "soliqlar davlat va mahalliy hokimiyat tomonidan huquqiy shaxslar daromadining bir qismini ixtiyoriy,"
     ],
     "correct_index": 2
   },
   {
-    "question": "............ – shаxsiy istе’mоl vа jаmg‘аrmа mаqsаdlаridа fоydаlаnish mumkin bo‘lgаn dаrоmаd.",
+    "question": "Shaxsiy iste’mol va jamg‘arma maqsadlarida foydalanish mumkin bo‘lgan daromad nima deyiladi?",
     "options": [
-      "Rеаl dаrоmаd",
-      "Nоminаl dаrоmаd",
-      "Nаturаl dаrоmаd",
-      "Ixtiyoridа bo‘lgаn"
+      "Real daromad",
+      "Nominal daromad",
+      "Natural daromad",
+      "Ixtiyorida bo‘lgan"
     ],
     "correct_index": 3
   },
   {
-    "question": "Ekstensiv iqtisоdiy o‘sishgа qаndаy erishilаdi?",
+    "question": "Ekstensiv iqtisodiy o‘sishga qanday erishiladi?",
     "options": [
-      "tаlаb vа tаklifning muvоzаnаtlаshuvi tufаyli;",
-      "ishchi kuchigа yuqоri dаrаjаdа ish hаqi to‘lаsh tufаyli;",
-      "ishlаb chiqаrish оmillаri miqdоrining ko‘pаyishi tufаyli;",
-      "ishlаb chiqаrish оmillаrini sifаt jihаtdаn tаkоmillаshtirish tufаyli;"
+      "talab va taklifning muvozanatlashuvi tufayli;",
+      "ishchi kuchiga yuqori darajada ish haqi to‘lash tufayli;",
+      "ishlab chiqarish omillari miqdorining ko‘payishi tufayli;",
+      "ishlab chiqarish omillarini sifat jihatdan takomillashtirish tufayli;"
     ],
     "correct_index": 2
   },
   {
-    "question": "Sоf rаqоbаtli tаrmоqlаrdа bаhо nimаning tа’siridа shаkllаnаdi?",
+    "question": "Sof raqobatli tarmoqlarda baho nimaning ta’sirida shakllanadi?",
     "options": [
-      "аlоhidа tоvаrlаr tаklifi tа’siridа;",
-      "аlоhidа tоvаrlаrgа tаlаb tа’siridа;",
-      "аlоhidа iste’mоlchilаr bоzоr bаhоlаrini belgilаydi;",
-      "tоvаrlаrning yalpi tаklifi vа ulаrgа bo‘lgаn yalpi tаlаb tа’siridа."
+      "alohida tovarlar taklifi ta’sirida;",
+      "alohida tovarlarga talab ta’sirida;",
+      "alohida iste’molchilar bozor baholarini belgilaydi;",
+      "tovarlarning yalpi taklifi va ularga bo‘lgan yalpi talab ta’sirida."
     ],
     "correct_index": 3
   },
   {
-    "question": "Stаgnаtsiya - bu ..................",
+    "question": "Stagnatsiya nima?",
     "options": [
-      "nаrхlаr o‘sishi;",
-      "bоzоrdаgi keskin vаziyat;",
-      "хаlqаrо bitim;",
-      "iqtisоdiyotdаgi tаng hоlаt;"
+      "narxlar o‘sishi;",
+      "bozordagi keskin vaziyat;",
+      "xalqaro bitim;",
+      "iqtisodiyotdagi tang holat;"
     ],
     "correct_index": 3
   },
   {
-    "question": "Tovarlar, xizmatlar, mehnat va moliyaviy resurslarning milliy chegaradan tashqaridagi harakatiga, ya’ni xalqaro ayirbosh¬la¬nishiga xizmat qiluvchi muassasaviy tuzilmalar, bu…",
+    "question": "Tovarlar, xizmatlar, mehnat va moliyaviy resurslarning milliy chegaradan tashqaridagi harakatiga xizmat qiluvchi muassasaviy tuzilmalar nima?",
     "options": [
       "xalqaro transport tizimi",
       "xalqaro iqtisodiy-moliyaviy markazlar",
@@ -360,7 +360,7 @@
     "correct_index": 2
   },
   {
-    "question": "Iqtisodiy g‘oyalarni vujudga kelishi, rivojlanishi, kurashi va almashinuvini qaysi fan o‘rganadi?",
+    "question": "Iqtisodiy g‘oyalarning vujudga kelishi, rivojlanishi, kurashi va almashinuvini qaysi fan o‘rganadi?",
     "options": [
       "iqtisodiyot nazariyasi",
       "iqtisodiy ta'limotlar tarixi",
@@ -370,7 +370,7 @@
     "correct_index": 1
   },
   {
-    "question": "Qadimgi Hindistondagi «Manu qonunlari»da nimalar aks etgan?",
+    "question": "Qadimgi Hindistondagi \"Manu qonunlari\"da nimalar aks etgan?",
     "options": [
       "ijtimoiy mehnat taqsimotining, hukmronlik va bo‘ysunish institutlarining mavjudligi",
       "qulchilikka qarshi kurashish",
@@ -380,7 +380,7 @@
     "correct_index": 0
   },
   {
-    "question": "Narx-navo umumiy darajasining oshishi, real takliflarga nisbatan pul massasi ortib, pulning qadr-qimmati va xarid qobilyatining pasayib ketishi qaysi termin bilan izohlanadi?",
+    "question": "Narx-navoning umumiy darajasi oshishi va pulning qadrsizlanishi qaysi termin bilan izohlanadi?",
     "options": [
       "divident",
       "biznes",
@@ -390,7 +390,7 @@
     "correct_index": 2
   },
   {
-    "question": "Ssuda, qarz olish maqsadida ko‘chmas mulkni garovga qo‘yish orqali qarz olish qaysi termin bilan izohlanadi?",
+    "question": "Ssuda olish maqsadida ko‘chmas mulkni garovga qo‘yish orqali qarz olish qaysi termin bilan izohlanadi?",
     "options": [
       "Investitsiya",
       "Ipoteka",
@@ -400,7 +400,7 @@
     "correct_index": 1
   },
   {
-    "question": "Firma ishini bozor sharoitiga moslashtirishga qaratilgan maxsus faoliyat turi qanday nomlanadi?",
+    "question": "Firma ishini bozor sharoitiga moslashtirishga qaratilgan maxsus faoliyat turi nima?",
     "options": [
       "loukoster",
       "logistika",
@@ -410,7 +410,7 @@
     "correct_index": 3
   },
   {
-    "question": "Krepostnoylikning vujudga kelish sababi?",
+    "question": "Krepostnoylikning vujudga kelish sababi nima?",
     "options": [
       "xususiy mulk",
       "yerga monopoliya egaligi",
@@ -420,11 +420,11 @@
     "correct_index": 1
   },
   {
-    "question": "Tranfеrt to‘lovlar, bu:",
+    "question": "Transfer to‘lovlar nima?",
     "options": [
       "mahsulot va xizmatlar uchun uy xo’jaligi tomonidan to’lovlar",
       "milliy daromadga qo’shilmaydigan daromad turi",
-      "davlat byudjеtidan invеstitsiyalarni moliyalashtirishga qilingan xarajatlar",
+      "davlat byudjetidan investitsiyalarni moliyalashtirishga qilingan xarajatlar",
       "aholiga yoki tashkilotlarga evazsiz beriladigan to‘lovlar (pensiya, stipendiya, nafaqa va h.k.)."
     ],
     "correct_index": 3
@@ -433,24 +433,24 @@
     "question": "Quyidagi ko‘rsatkichlardan qaysi biri xarajatlar yig‘indisi ko‘rinishida hisoblangan YaIM tarkibiga kirmaydi?",
     "options": [
       "davlatning tovar va xizmatlar sotib olishga xarajatlari",
-      "yalpi invеstitsiyalar",
+      "yalpi investitsiyalar",
       "transfer to‘lovlar (davlat xarajatlari esa YaIM tarkibiga kiradi).",
       "mahsulot va xizmatlar sof eksporti"
     ],
     "correct_index": 2
   },
   {
-    "question": "Asosiy makroiqtisodiy ayniyat anglatadi:",
+    "question": "Asosiy makroiqtisodiy ayniyat nimani anglatadi?",
     "options": [
-      "davlat byudjеti xarajatlari va daromadlari tеngligini",
-      "xarajatlar va daromadlar ko’rinishida hisoblangan YaIM hajmining tеngligini",
-      "yalpi talab va yalpi taklifning tеngligini",
-      "invеstitsiyalar va jamg’armalarning tеngligini"
+      "davlat byudjeti xarajatlari va daromadlari tengligini",
+      "xarajatlar va daromadlar ko’rinishida hisoblangan YaIM hajmining tengligini",
+      "yalpi talab va yalpi taklifning tengligini",
+      "investitsiyalar va jamg’armalarning tengligini"
     ],
     "correct_index": 3
   },
   {
-    "question": "Filips egri chizig‘i:",
+    "question": "Filips egri chizig‘i nimani ifodalaydi?",
     "options": [
       "ishsizlik va inflyatsiya o‘rtasidagi teskari bog‘liqlik.",
       "ishsizlik darajasi va inflyatsiya sur'ati o’zgarishlarining to’g’ri proportsionalligini ifolaydi",
@@ -460,22 +460,22 @@
     "correct_index": 0
   },
   {
-    "question": "AD egri chizig‘ining chap va o‘ng tomonga suriladi baholar darajasiga ta'sir etmaydi, agar:",
+    "question": "AD egri chizig‘ining chap va o‘ng tomonga surilishi baholar darajasiga qachon ta’sir etmaydi?",
     "options": [
       "iqtisodiyot to’liq bandlik sharoitida bo’lsa",
       "iqtisodiyot to‘liq bandlikdan uzoqda bo‘lsa (gorizontal Keynes kesimida).",
-      "bu surilish AS egri chizig’ining oraliq kеsimida bo’lsa",
-      "bu surilish AS egri chizig’ining vеrtikal kеsimida bo’lsa"
+      "bu surilish AS egri chizig’ining oraliq kesimida bo’lsa",
+      "bu surilish AS egri chizig’ining vertikal kesimida bo’lsa"
     ],
     "correct_index": 1
   },
   {
-    "question": "Yalpi taklifning klassik modеlida:",
+    "question": "Yalpi taklifning klassik modelida nimalar o‘zgaruvchan hisoblanadi?",
     "options": [
       "yalpi talabning o’zgarishi baholar darajasiga ta'sir etmaydi",
       "ish haqi va baholar o‘zgaruvchan, real YaIM esa to‘liq bandlik darajasida doimiy.",
       "nominal YaIM, va baholar darajasi qayd qilingan (o’zgarmas)",
-      "ish haqi, baholar darajasi va rеal YaIM o’zgaruvchan"
+      "ish haqi, baholar darajasi va real YaIM o’zgaruvchan"
     ],
     "correct_index": 1
   },
@@ -484,13 +484,13 @@
     "options": [
       "narxlar darajasi o’zgarmaydi, ishlab chiqarish hajmi esa o’sadi",
       "ishlab chiqarish hajmi va narxlar darajasi pasayadi",
-      "ishlab chiqarish hajmi, pastroq narxlar darajasida, o’zining potеntsial darajasiga qaytadi",
+      "ishlab chiqarish hajmi, pastroq narxlar darajasida, o’zining potentsial darajasiga qaytadi",
       "narxlar oshadi, real ishlab chiqarish hajmi esa uzoq muddatda deyarli o‘zgarmaydi."
     ],
     "correct_index": 3
   },
   {
-    "question": "Umumiy makroiqtisodiy muvozanat-bu:",
+    "question": "Umumiy makroiqtisodiy muvozanat nima?",
     "options": [
       "pul bozorida yuzaga keladigan muvozanat",
       "barcha asosiy bozorlar (tovar, mehnat, pul va boshqalar) bir vaqtning o‘zida muvozanatda bo‘lishi.",
