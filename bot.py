@@ -29,25 +29,43 @@ except Exception as e:
     special_questions = []
     print(f"Xatolik: special_questions.json o'qilmadi! Sababi: {e}")
 
-print(f"\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta\n")
+try:
+    with open("special_questions_2.json", "r", encoding="utf-8") as f:
+        special_questions_2 = json.load(f)
+except Exception as e:
+    special_questions_2 = []
+    print(f"Xatolik: special_questions_2.json o'qilmadi! Sababi: {e}")
 
-SECTION_NAMES = [
-    f"⭐ Tahrirlangan maxsus bo'lim ({len(special_questions)} ta savol)"
-]
+print(f"\n[INFO] Maxsus bo'lim uchun topilgan savollar soni: {len(special_questions)} ta")
+print(f"[INFO] Yangi maxsus bo'lim uchun topilgan savollar soni: {len(special_questions_2)} ta\n")
 
-SECTIONS = [special_questions]
+SECTION_NAMES = []
+SECTIONS = []
+
+if special_questions:
+    SECTION_NAMES.append(f"⭐ Tahrirlangan maxsus bo'lim ({len(special_questions)} ta savol)")
+    SECTIONS.append(special_questions)
+
+if special_questions_2:
+    SECTION_NAMES.append(f"🔥 Yangi maxsus bo'lim ({len(special_questions_2)} ta savol)")
+    SECTIONS.append(special_questions_2)
 
 # Qolganlarini odatiy bo'limlarga bo'lamiz
 chunk_size = 100
+start_regular_idx = len(SECTIONS)
+
 for i in range(0, len(other_questions), chunk_size):
     chunk = other_questions[i:i + chunk_size]
     SECTIONS.append(chunk)
     
 # Bo'lim nomlarini to'ldirish
-for i in range(1, len(SECTIONS)):
-    start_idx = (i-1)*100 + 1
+# Faqatgina 'other_questions' dan olingan qismlarga raqam beramiz
+for i in range(start_regular_idx, len(SECTIONS)):
+    # qaysi qismdaligini topish
+    regular_i = i - start_regular_idx
+    start_idx = regular_i * 100 + 1
     end_idx = start_idx + len(SECTIONS[i]) - 1
-    SECTION_NAMES.append(f"{i}-bo'lim ({start_idx}-{end_idx}-savollar)")
+    SECTION_NAMES.append(f"{regular_i + 1}-bo'lim ({start_idx}-{end_idx}-savollar)")
 
 active_games = {} # Guruhlardagi o'yin holatini saqlash uchun
 
