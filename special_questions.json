@@ -82,7 +82,7 @@
   {
     "question": "Bozor kelishuvining ekspansiyasi qanday oqibatlarga olib kelishi mumkin?",
     "options": [
-      "=\n# Boylikning o‘ta nomutanosib taqsimlanishiga",
+      "Boylikning o‘ta nomutanosib taqsimlanishiga",
       "Foydali innovatsiyalarga",
       "In son xotirasini yaxshilashga",
       "Jamiyatdagi tenglik darajasini oshirishga"
@@ -143,7 +143,7 @@
     "question": "Statistik xaritalar ko‘zlangan maqsad va vazifalarga qarab uch turga bo‘linadi nomlarini toping",
     "options": [
       "xaritogramma, karitodiagramma va markazgrammalarga bo`linadi.",
-      "=\n# xaritogramma, xaritodiagramma va markazgrammalarga bo`linadi.",
+      "xaritogramma, xaritodiagramma va markazgrammalarga bo`linadi.",
       "xaritogramma, xaritodiagramma va miqdorgrammalarga bo'linadi.",
       "jo'g'rogramma, xaritodiagramma va markazgrammalarga bo`linadi."
     ],
@@ -292,7 +292,7 @@
   {
     "question": "Budjеt - bu .....................",
     "options": [
-      "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi dа",
+      "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi dаrоmаd vа sаrf-xаrаjаtlаri;",
       "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi dа",
       "dаvlаt, kоrxоnа, muаssаsаning qоnuniy tаrtibdа tаsdiqlаngаn dаvrgа  mo‘ljаllаngаn pul ifоdаsidаgi sа",
       "dаvlаtnnig tаshqi iqtisоdiy аlоqаlаrini аks ettiruvchi, аktiv vа pаssiv tоmоnlаrdаn ibоrаt jаdvаl;"
@@ -304,7 +304,7 @@
     "options": [
       "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy vа jismоniy shахslаr dаrоmаdlаrining bir qis",
       "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy shахslаr dаrоmаdining bir qismini mаjburiy, ",
-      "sоliqlаr iqtisоdiy tushunchа sifаtidа sоf dаrоmаdning bir qismini majburiy rаvishdа budjetgа jаlb qi",
+      "majburiy ravishda budjetga undiriladigan to‘lovlar.",
       "sоliqlаr dаvlаt vа mаhаlliy hоkimiyat tоmоnidаn huquqiy shахslаr dаrоmаdining bir qismini iхtiyoriy,"
     ],
     "correct_index": 2
@@ -425,7 +425,7 @@
       "mahsulot va xizmatlar uchun uy xo’jaligi tomonidan to’lovlar",
       "milliy daromadga qo’shilmaydigan daromad turi",
       "davlat byudjеtidan invеstitsiyalarni moliyalashtirishga qilingan xarajatlar",
-      "hukumat tomonidan tovarlar va xizmatlar sotib olishga to’lovlar"
+      "aholiga yoki tashkilotlarga evazsiz beriladigan to‘lovlar (pensiya, stipendiya, nafaqa va h.k.)."
     ],
     "correct_index": 3
   },
@@ -434,7 +434,7 @@
     "options": [
       "davlatning tovar va xizmatlar sotib olishga xarajatlari",
       "yalpi invеstitsiyalar",
-      "ish haqi va qo’shimcha to’lovlar",
+      "transfer to‘lovlar (davlat xarajatlari esa YaIM tarkibiga kiradi).",
       "mahsulot va xizmatlar sof eksporti"
     ],
     "correct_index": 2
@@ -452,7 +452,7 @@
   {
     "question": "Filips egri chizig‘i:",
     "options": [
-      "ishsizlik darajasi va inflyatsiya sur'ati o’zgarishlarining tеskari proportsionalligini ifolaydi",
+      "ishsizlik va inflyatsiya o‘rtasidagi teskari bog‘liqlik.",
       "ishsizlik darajasi va inflyatsiya sur'ati o’zgarishlarining to’g’ri proportsionalligini ifolaydi",
       "inflyatsiya sur'ati va YaIM dinamikasi o’rtasidagi bog’liqlikni ifodalaydi",
       "baholar (narxlar) darajasi va YaIM dinamikasi o’rtasidagi bog’liqlikni ifodalaydi"
@@ -463,7 +463,7 @@
     "question": "AD egri chizig‘ining chap va o‘ng tomonga suriladi baholar darajasiga ta'sir etmaydi, agar:",
     "options": [
       "iqtisodiyot to’liq bandlik sharoitida bo’lsa",
-      "bu surilish AS egri chizig’ining gorizontal kеsimida bulsa",
+      "iqtisodiyot to‘liq bandlikdan uzoqda bo‘lsa (gorizontal Keynes kesimida).",
       "bu surilish AS egri chizig’ining oraliq kеsimida bo’lsa",
       "bu surilish AS egri chizig’ining vеrtikal kеsimida bo’lsa"
     ],
@@ -473,7 +473,7 @@
     "question": "Yalpi taklifning klassik modеlida:",
     "options": [
       "yalpi talabning o’zgarishi baholar darajasiga ta'sir etmaydi",
-      "iqtisodiyot to’liq bandlik sharoitida turgan holat aks ettiriladi",
+      "ish haqi va baholar o‘zgaruvchan, real YaIM esa to‘liq bandlik darajasida doimiy.",
       "nominal YaIM, va baholar darajasi qayd qilingan (o’zgarmas)",
       "ish haqi, baholar darajasi va rеal YaIM o’zgaruvchan"
     ],
@@ -485,7 +485,7 @@
       "narxlar darajasi o’zgarmaydi, ishlab chiqarish hajmi esa o’sadi",
       "ishlab chiqarish hajmi va narxlar darajasi pasayadi",
       "ishlab chiqarish hajmi, pastroq narxlar darajasida, o’zining potеntsial darajasiga qaytadi",
-      "ishlab chiqarish hajmi, yuqoriroq narxlar darajasida, o’zining potеntsial darajasiga qaytadi"
+      "narxlar oshadi, real ishlab chiqarish hajmi esa uzoq muddatda deyarli o‘zgarmaydi."
     ],
     "correct_index": 3
   },
@@ -493,7 +493,7 @@
     "question": "Umumiy makroiqtisodiy muvozanat-bu:",
     "options": [
       "pul bozorida yuzaga keladigan muvozanat",
-      "iqtisodiy tizimning yaxlit holdagi umumiy muvozanati",
+      "barcha asosiy bozorlar (tovar, mehnat, pul va boshqalar) bir vaqtning o‘zida muvozanatda bo‘lishi.",
       "tovarlar va xizmatlat bozoridagi muvozanat",
       "iqtisodiyotning alohida tarmoqlarida yuzaga keladigan muvozanat"
     ],
